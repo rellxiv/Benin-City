@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Testing Form</title>
+    <link rel="stylesheet" href="./C24-COVID-19-Website-AddingTimeline-main/stylesheets/formStyle.css">
+</head>
+<body>
+    <div id="navbar">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="timeline.html">Timeline</a>
+                </li>
+                <li>
+                    <a href="form.html">Corona Testing</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="regform">
+        <h1>Information Form</h1>
+    </div>
+    <div class="main">
+        <form id="testform">
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input type="text" id="firstname" required name="first_name">
+                <label id="firstlabel">first name</label>
+                <input type="text" id="lastname" required name="last_name">
+                <label id="lastlabel">last name</label>
+            </div>
+            <h2 class="name">Profession</h2>
+            <input type="text" id="profession" name="profession">
+            <h2 class="name">Email</h2>
+            <input type="text" id="email" name="email" required>
+            <h2 class="name">Date of Birth</h2>
+            <input type="date" id="dateofbirth" name="dateofbirth" required>
+            <h2 class="name">Mobile</h2>
+            <input type="text" id="mobile" name="mobile" required pattern="[789][0-9]{9}">
+            <h2 class="name">State</h2>
+            <select name="state" id="state">
+                <option disabled="disabled" required selected="selected">Choose</option>
+                <option>State 1</option>
+                <option>State 2</option>
+                <option>State 3</option>
+                <option>State 4</option>
+            </select>
+            <h2 class="travel">Have you travelled in or out of COVID-19 affected countries within the last month?</h2>
+            <div id="travel">
+               <input type="radio" name="option" value="yes">Yes
+               <input type="radio" name="option" value="no" checked="checked">No
+            </div>
+            <h2 id="symptoms">Do you have any of the following symptoms?</h2>
+            <div class="arrange">
+                <input type="checkbox" name="symptoms" value="fever" id="cb1">
+                <label for="cb1">Fever</label> <br>
+                <input type="checkbox" name="symptoms" value="dry cough" id="cb2">
+                <label for="cb2">Dry Cough</label> <br>
+                <input type="checkbox" name="symptoms" value="cold" id="cb3">
+                <label for="cb3">Cold</label> <br>
+                <input type="checkbox" name="symptoms" value="breathing issues" id="cb4">
+                <label for="cb4">Breathing Issues</label> <br>
+                <input type="checkbox" name="symptoms" value="chest pain" id="cb5">
+                <label for="cb5">Chest Pain</label> <br>
+            </div>
+            <input type="submit" id="submit">
+            <h2 id="centers">Testing Centers Near You <span id="result"></span></h2>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="./C24-COVID-19-Website-AddingTimeline-main/scripts/formScript.js"></script>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+</script>
+</html>
